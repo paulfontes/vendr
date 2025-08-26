@@ -26,6 +26,24 @@ class ObservableAppState extends EventEmitter {
       imgUrl:
       "https://plus.unsplash.com/premium_photo-1668771085743-1d2d19818140?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl6emF8ZW58MHx8MHx8fDA%3D"
     }),
+    new Snack({
+      name: "Ramen",
+      price: 5.60,
+      imgUrl:
+      "https://plus.unsplash.com/premium_photo-1694708455249-992010f9db32?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }),
+    new Snack({
+      name: "Hot Dog",
+      price: .25,
+      imgUrl:
+      "https://images.unsplash.com/photo-1613482084286-41f25b486fa2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }),
+    new Snack({
+      name: "Sushi",
+      price: 7.60,
+      imgUrl:
+      "https://plus.unsplash.com/premium_photo-1668146927669-f2edf6e86f6f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }),
 
   ];
 

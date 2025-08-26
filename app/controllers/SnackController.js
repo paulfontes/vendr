@@ -7,7 +7,7 @@ export class SnacksController {
     constructor() {
         console.log('🍕🍟')
         this.drawSnacks()
-
+        
     }
 
     drawSnacks(){
@@ -17,15 +17,22 @@ export class SnacksController {
         const cardListElm = document.getElementById('cards-list')
         cardListElm.innerHTML = snacksContent
     }
-
+    
+    drawMoney(){
+    const addQuarterElm = document.getElementById('add-quarter')
+    addQuarterElm.innerHTML = `Money: $${AppState.money.toFixed(2)}`
+    }
+    
     addQuarter(){
         snackService.addQuarter()
         console.log(AppState)
-        const addQuarterElm = document.getElementById('add-quarter')
-        addQuarterElm.innerHTML = `Money: $${AppState.money}`
+        this.drawMoney()
     }
-
+    
     buySnack(snackName) {
         snackService.buySnack(snackName)
+        console.log(AppState.money)
+        this.drawMoney()
+        
     }
 }

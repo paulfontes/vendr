@@ -8,7 +8,7 @@ export class Snack {
 
    get snackCard() {
         return `
-        <div class="col-4 card">
+        <div class="col-3 card">
         <div class="card-body text-center">
           <img class="img-fluid" src="${this.imgUrl}" alt="">
           <span class="fw-bold">${this.name}</span>
