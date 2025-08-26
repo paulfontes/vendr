@@ -7,6 +7,10 @@ export class SnacksController {
     constructor() {
         console.log('🍕🍟')
         this.drawSnacks()
+ 
+
+        AppState.on('money', this.drawSnacks)
+        AppState.on('money', this.drawMoney)
         
     }
 
@@ -26,13 +30,15 @@ export class SnacksController {
     addQuarter(){
         snackService.addQuarter()
         console.log(AppState)
-        this.drawMoney()
+        // this.drawSnacks()
+        // this.drawMoney()
     }
     
     buySnack(snackName) {
         snackService.buySnack(snackName)
         console.log(AppState.money)
-        this.drawMoney()
+        // this.drawSnacks()
+        // this.drawMoney()
         
     }
 }

@@ -46,6 +46,8 @@ class ObservableAppState extends EventEmitter {
     }),
 
   ];
+// /** @type {Snack} */
+//   activeSnack = null
 
 }
 

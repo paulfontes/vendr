@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js";
 
 export class Snack {
     constructor(data) {
@@ -11,10 +12,16 @@ export class Snack {
         <div class="col-3 card">
         <div class="card-body text-center">
           <img class="img-fluid" src="${this.imgUrl}" alt="">
-          <span class="fw-bold">${this.name}</span>
-          <span>$${this.price}</span>
-          <button onclick="app.SnacksController.buySnack('${this.name}')" class="btn btn-success">BUY ${this.name}</button>
+          <p class="fw-bold">${this.name}</p>
+          <p>$${this.price.toFixed(2)}</p>
+          <button ${this.buyButtonDisable} onclick="app.SnacksController.buySnack('${this.name}')" class="btn btn-success">BUY ${this.name}</button>
         </div>
       </div>`
+    }
+    get buyButtonDisable() {
+        if(this.price > AppState.money){
+        return 'disabled'
+        }
+        return ''
     }
 }
